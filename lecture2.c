@@ -4,8 +4,9 @@ float mean(int sum_score, short num_student);
 //variance(folat mean_score, 
 
 
-
 int main (void) {
+
+	//short score[30] = {0, };
 
 	short score_student1 = 0;
 	short score_student2 = 0;
@@ -14,6 +15,8 @@ int main (void) {
 	short num_student = 0;
 	int sum_score = 0;
 	float mean_score = 0.0;
+	
+	
 	
 	//struct student
 	//scanf("%d", num_student);

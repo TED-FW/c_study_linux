@@ -6,22 +6,23 @@ int main (){
 	int score_sum = 0;
 	float everage_score = 0.0;
 
-	unsigned short s_score[student_num] = {0.};
+	short i = 0;
 
 
-	pritnf("put in number of students: ");
-	scanf("%hu",student_num);
+	printf("put in number of students: ");
+	scanf("%hu",&student_num);
 
 
+	unsigned short s_score[student_num] = {0};
 
 
-	while (short i < student_num){
+	while (i < student_num){
 		printf("put in student%hd's score : ",i+1);
-		scanf("%hu",s_score[i]);
+		scanf("%hu",&s_score[i]);
 		
 		score_sum += s_score[i];
 
-		i++i
+		i++;
 	}
 
 	printf("sum of each score : %d \n", score_sum);

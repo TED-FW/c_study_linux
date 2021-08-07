@@ -1,0 +1,5 @@
+ihello, World!
+ABCDEFGHIJKLMN
+Apple135
+Banana
+Programming Sample Text

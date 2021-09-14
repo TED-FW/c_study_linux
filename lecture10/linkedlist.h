@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "ted_math.h"
 
 struct list{
 	int cnt;
@@ -18,6 +19,7 @@ struct node{
 
 typedef struct node NODE;
 
+void append_data(LIST* L, char data);
 
 void append_list(LIST* L);
 
@@ -32,6 +34,10 @@ float average_list(LIST* L);
 void convert_int2binary(LIST* L, int num_int, int bit);
 
 void print_32bit(LIST* L);
+
+void binary_2_hex(LIST* L2, LIST* L16);
+
+void print_hex(LIST* L16);
 
 void circular_right_shift(LIST* L, int n_shift);
 

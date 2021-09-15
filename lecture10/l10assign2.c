@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "linkedlist.h"
 
+
+void ifresult0(int result);
+
 int main (void){
 	char c = 0;
 	int input1 = 0, input2 = 0;
@@ -8,7 +11,7 @@ int main (void){
 	int result = 0;
 	NODE* N1 = NULL;
 	NODE* N2 = NULL;
-
+	
 	LIST* L1 = (LIST*)malloc(sizeof(LIST));
 	if(!L1){
 		printf("L1 malloc fail\n");
@@ -17,16 +20,16 @@ int main (void){
 	if(!L2){
 		printf("L2 malloc fail\n");
 	}
-	
+
 	printf("input1 : ");
 	while((c = getchar()) != '\n'){
-		append_data(L1,c);
+		append_data(L1,c-48);
 	}
-
 	printf("input2 : ");
 	while((c = getchar()) != '\n'){
-		append_data(L2,c);
+		append_data(L2,c-48);
 	}
+
 
 	if(L1->cnt >= L2->cnt){
 		N1 = L1->head;
@@ -60,18 +63,26 @@ int main (void){
 		}
 
 	}
-	printf("%d %d", input1, input2);
-
-
 	printf("Result: : ");
 	result = input1 + input2;
-	/*
-	while(result){
-		printf("%d", result%2);
-		result/2;
-	}
-	*/
+
+	ifresult0(result);
+
 	printf(" (%d)\n", (input1 + input2));
 
 	return 0;
 }
+
+void ifresult0(int result)
+{	
+	int temp = 0;
+
+	if(result>0){
+		temp = result%2;
+		result/=2;
+		ifresult0(result);
+		printf("%d",temp);
+	}
+	return;
+}
+
